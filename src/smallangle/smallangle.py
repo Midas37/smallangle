@@ -16,10 +16,15 @@ def cmd_group():
     "-n",
     "--number",
     default=10,
-    help="Number of steps between 0 and 2 pi",
+    help="Number of evenly spaced steps between 0 and 2 pi",
     show_default=True,  # show default in help
 )
 def sin(number):
+    """Dataframe of sine values
+
+    Args:
+        number (int): number of evenly spaced steps between 0 and 2 pi
+    """
     x = np.linspace(0, 2 * pi, number)
     df = pd.DataFrame({"x": x, "sin (x)": np.sin(x)})
     print(df)
@@ -32,10 +37,15 @@ def sin(number):
     "-n",
     "--number",
     default=10,
-    help="Number steps between 0 and 2 pi",
+    help="Number of evenly steps between 0 and 2 pi",
     show_default=True,  # show default in help
 )
 def tan(number):
+    """Dataframe of tangent values
+
+    Args:
+        number (int): number of evenly spaced steps between 0 and 2 pi
+    """
     x = np.linspace(0, 2 * pi, number)
     df = pd.DataFrame({"x": x, "tan (x)": np.tan(x)})
     print(df)
